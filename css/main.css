@@ -749,10 +749,6 @@ color: #aa8453;
     }
 }
 
-
-
-
-
 /* ======= Section style ======= */
 .section-padding {
     padding: 40px 0;
@@ -4669,4 +4665,32 @@ select {
     .post-comment-section h3 span {
         margin-left: 0px;
     }
+}
+
+.title {
+    overflow: hidden;
+    text-align: center;
+    font-size: 30px;
+}
+.title span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.title:before,
+.title:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    height: 2px;
+    background-color: #aa8453;
+    position: relative;
+}
+.title:before {
+    margin-left: -100%;
+    left: -14px;
+}
+.title:after {
+    margin-right: -100%;
+    right: -14px;
 }
