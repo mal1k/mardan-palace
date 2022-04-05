@@ -4694,3 +4694,22 @@ select {
 .selection {
     width: 100%;
 }
+
+.slider-phone {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .slider-phone {
+        display: block;
+        line-height: 30px;
+        position: absolute;
+        bottom: -15px;
+        font-size: 18px;
+        font-family: Arial;
+        left: 0;
+        right: 0;
+        color: #aa8453 !important;
+        z-index: 9;
+    }
+}
