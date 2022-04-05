@@ -9,16 +9,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow&amp;family=Barlow+Condensed&amp;family=Gilda+Display&amp;display=swap">
     <link rel="stylesheet" href="css/5TQb15ILNgmh.css">
     <link rel="stylesheet" href="css/main.css">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144098545-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-144098545-1');
-    </script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Preloader -->
@@ -100,8 +92,12 @@
                         </div>
                     </div>
                 </div>
+
+                <h4 class="slider-phone">
+                    <a href="tel:380672002005"><i class="flaticon-call"></i> +38 (067) 200-200-5</a>
+                </h4>
             </div>
-            <div class="text-center item bg-img" data-overlay-dark="2" data-background="images/slider/mardan-palace-2.webp">
+            <!-- <div class="text-center item bg-img" data-overlay-dark="2" data-background="images/slider/mardan-palace-2.webp">
                 <div class="v-middle caption">
                     <div class="container">
                         <div class="row">
@@ -121,7 +117,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
+
+
             <!-- <div class="text-center item bg-img" data-overlay-dark="3" data-background="img/slider/1.jpg">
                 <div class="v-middle caption">
                     <div class="container">
@@ -229,68 +227,81 @@
     <!-- Booking Search -->
     <section class="section-padding bg-cream" data-scroll-index="2">
         <div class="container">
-            <div class="section-subtitle">Check Now</div>
-            <div class="section-title">Search Rooms</div>
+            <div class="section-subtitle">Выберите параметры</div>
+            <div class="section-title">Бронирование</div>
             <div class="booking-inner clearfix">
-                <form class="form1 clearfix">
+                <form id="checkAvailability" class="form1 clearfix">
                     <div class="col1 c1">
                         <div class="input1_wrapper">
-                            <label>Check in</label>
+                            <label>Дата заезда</label>
                             <div class="input1_inner">
-                                <input type="text" class="form-control input datepicker" placeholder="Check in">
+                                <!-- class datepicker -->
+                                <input id="punchIn" type="text" class="form-control input datepicker" placeholder="Дата заезда"> 
                             </div>
                         </div>
                     </div>
                     <div class="col1 c2">
                         <div class="input1_wrapper">
-                            <label>Check out</label>
+                            <label>Дата выезда</label>
                             <div class="input1_inner">
-                                <input type="text" class="form-control input datepicker" placeholder="Check out">
+                                <input id="punchOut" type="text" class="form-control input datepicker" placeholder="Дата выезда">
                             </div>
                         </div>
                     </div>
                     <div class="col2 c3">
                         <div class="select1_wrapper">
-                            <label>Adults</label>
+                            <label>Взрослые</label>
                             <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
-                                    <option value="1">1 Adult</option>
-                                    <option value="2">2 Adults</option>
-                                    <option value="3">3 Adults</option>
-                                    <option value="4">4 Adults</option>
+                                <select id="countAdults" class="select2 select" style="width: 100%">
+                                    <option value="1">1 взрослый</option>
+                                    <option value="2">2 взрослых</option>
+                                    <option value="3">3 взрослых</option>
+                                    <option value="4">4 взрослых</option>
+                                    <option value="5">5 взрослых</option>
+                                    <option value="6">6 взрослых</option>
+                                    <option value="7">7 взрослых</option>
+                                    <option value="8">8 взрослых</option>
+                                    <option value="9">9 взрослых</option>
+                                    <option value="10">10 взрослых</option>
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div class="col2 c4">
                         <div class="select1_wrapper">
-                            <label>Children</label>
+                            <label>Дети</label>
                             <div class="select1_inner">
-                                <select class="select2 select" style="width: 100%">
-                                    <option value="1">Children</option>
-                                    <option value="1">1 Child</option>
-                                    <option value="2">2 Children</option>
-                                    <option value="3">3 Children</option>
-                                    <option value="4">4 Children</option>
+                                <select id="countKids" class="select2 select" style="width: 100%">
+                                    <option value="0">Дети</option>
+                                    <option value="1">1 ребенок</option>
+                                    <option value="2">2 ребенка</option>
+                                    <option value="3">3 ребенка</option>
+                                    <option value="4">4 ребенка</option>
+                                    <option value="5">5 детей</option>
+                                    <option value="6">6 детей</option>
+                                    <option value="7">7 детей</option>
+                                    <option value="8">8 детей</option>
+                                    <option value="9">9 детей</option>
+                                    <option value="10">10 детей</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col2 c5">
+                    <!-- <div class="col2 c5">
                         <div class="select1_wrapper">
                             <label>Rooms</label>
                             <div class="select1_inner">
                                 <select class="select2 select" style="width: 100%">
-                                    <option value="1">1 Room</option>
-                                    <option value="2">2 Rooms</option>
-                                    <option value="3">3 Rooms</option>
-                                    <option value="4">4 Rooms</option>
+                                    <option value="1">1 комната</option>
+                                    <option value="2">2 комнаты</option>
+                                    <option value="3">3 комнаты</option>
+                                    <option value="4">4 комнаты</option>
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col3 c6">
-                        <button type="submit" class="btn-form1-submit">Check Now</button>
+                        <button type="submit" class="btn-form1-submit">Проверить</button>
                     </div>
                 </form>
             </div>
@@ -421,7 +432,66 @@
             </div>
         </div>
     </footer>
-    <!-- jQuery -->
+
+    <script>
+        $("#checkAvailability").submit( function(e) {
+            e.preventDefault();
+            var punchInDate = new Date( $("#punchIn").val() );
+                punchInDay = punchInDate.getDate();
+                punchInMonth = punchInDate.getMonth() + 1;
+                punchInYear = punchInDate.getFullYear();
+
+            var punchOutDate = new Date( $("#punchOut").val() );
+                punchOutDay = punchOutDate.getDate();
+                punchOutMonth = punchOutDate.getMonth() + 1;
+                punchOutYear = punchOutDate.getFullYear();
+            
+            var adults = $("#countAdults").val();
+            if ( adults == 1 )
+                anchor = "#hp_availability_style_changes";
+            else
+                anchor = "#group_recommendation";
+
+            var countKids = $("#countKids").val();
+            var kids = '';
+            while (countKids > 0) {
+                kids += 'age=9&';
+                countKids--;
+            }            
+
+            link = 
+                'https://www.booking.com/hotel/ua/mardan-palace.ru.html?sid=b6bae4c19a160538e0aea019bf40832b;' +
+                'checkin_month='+punchInMonth+'&' +
+                'checkin_monthday='+punchInDay+'&' +
+                'checkin_year='+punchInYear+'&' +
+                'checkout_month='+punchOutMonth+'&' +
+                'checkout_monthday='+punchOutDay+'&' +
+                'checkout_year='+punchOutYear+'&' +
+                'group_adults='+adults+'&' +
+                kids +
+                // 'no_rooms='+punchInMonth+'&' +
+                anchor;
+
+            window.open(link);
+
+            // https://www.booking.com/hotel/ua/mardan-palace.ru.html?sid=b6bae4c19a160538e0aea019bf40832b;
+
+            // checkin_month=5&
+            // checkin_monthday=21&
+            // checkin_year=2022&
+
+            // checkout_month=5&
+            // checkout_monthday=22&
+            // checkout_year=2022&
+
+            // group_adults=3&
+            // group_children=1&
+            // no_rooms=2&
+
+            // #group_recommendation
+
+        });
+    </script>
     <script src="js/BBMhWaDETtoh.js"></script>
     <script src="js/nuTj5ivrxYZs.js"></script>
     <script src="js/PKdnAurXA4Au.js"></script>
