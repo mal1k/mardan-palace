@@ -3186,7 +3186,7 @@ button.mfp-arrow {
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     font-size: 15px;
     line-height: 1;
-    padding: 23px 49px 17px 20px;
+    padding: 24px 49px 23px 20px;
     color: #222;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -4690,4 +4690,7 @@ select {
 .title:after {
     margin-right: -100%;
     right: -14px;
+}
+.selection {
+    width: 100%;
 }
