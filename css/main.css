@@ -1349,9 +1349,32 @@ hr {
 .header div.reservation a .icon:hover {
     border: 1px solid #aa8453;
 }
+
 @media screen and (max-width: 768px) {
+    .slider-phone-link {
+        transform: rotate(270deg);
+        margin-bottom: 15px;
+    }
+
     .header div.reservation {
         display: none;
+    }
+
+    .header div .icon {
+        width: 50px;
+        height: 50px;
+        border: 1px solid rgba(255,255,255,0.5);
+        -webkit-animation: pulse 2s infinite;
+        animation: pulse 2s infinite;
+        border-radius: 100%;
+    }
+    .header div a .icon i {
+        color: #FFF;
+        font-size: 24px;
+        transform: rotate(90deg);
+    }
+    .header div a .icon:hover {
+        border: 1px solid #aa8453;
     }
 }
 
@@ -4695,16 +4718,16 @@ select {
     width: 100%;
 }
 
-.slider-phone {
+.header-phone {
     display: none;
 }
 
 @media screen and (max-width: 767px) {
-    .slider-phone {
+    .header-phone {
         display: block;
         line-height: 30px;
         position: absolute;
-        bottom: -15px;
+        top: 0;
         font-size: 18px;
         font-family: Arial;
         left: 0;
