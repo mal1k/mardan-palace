@@ -916,6 +916,8 @@ color: #aa8453;
 .logo {
     padding: 0;
     text-align: center;
+    font-family: ui-monospace;
+    text-transform: uppercase;
 }
 .logo-img {
     width: 160px;
@@ -1064,17 +1066,17 @@ color: #aa8453;
     }
     .nav-scroll {
         background: #fff;
-}
     }
+
+}
     .logo-wrapper {
         float: left;
-        padding: 15px;
+        padding: 20px 0 0 20px;
     }
     .nav-scroll .logo-wrapper {
         padding: 15px;
         background-color: #fff;
     }
-}
 
 
 /* ======= Header style ======= */
@@ -1348,6 +1350,12 @@ hr {
 }
 .header div.reservation a .icon:hover {
     border: 1px solid #aa8453;
+}
+
+@media screen and (min-width: 768px) {
+    .slider-phone-link {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -4388,6 +4396,9 @@ select {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+}
+.active-progress p {
+    color: black !important;
 }
 .progress-wrap::after {
     position: absolute;
